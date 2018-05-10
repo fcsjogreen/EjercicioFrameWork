@@ -1,9 +1,3 @@
-//TODO: dibujar al iniciar en antes de crearTablero  y animar eliminarenMomoria
-//TODO: temporizador función Time, temporizar cuando se elimina, temporizar cuando se crean nuevos dulces
-//TODO: animacion  blink al eliminar dulces
-var min;
-var seg;
-var n;
 var tiempo;
 var eliminar;
 var nuevoDulce;
@@ -446,6 +440,8 @@ $(function(){
 
             var tmp = cuadro[sr][c].fuente;
             cuadro[sr][c].fuente = cuadro[sr -1][c].fuente;
+            //cuadro[sr][c].o.o.animate({ top: '-=30'}, 10);
+            //cuadro[sr][c].o.animate({ top: '+=30'}, 500);
             cuadro[sr-1][c].fuente=tmp;
 
 
@@ -487,8 +483,8 @@ $(function(){
 
 
                 //simular caida gravedad
-                 cuadro[f][c].o.animate({ top: '-=30'}, 10);
-                 cuadro[f][c].o.animate({ top: '+=30'}, 500);
+                // cuadro[f][c].o.animate({ top: '-=30'}, 10);
+                // cuadro[f][c].o.animate({ top: '+=30'}, 500);
 
                 cuadro[f][c].o.draggable(
                         {
